@@ -12,8 +12,16 @@ return {
       analysis = {
         typeCheckingMode = "basic", -- off, basic, strict
         autoSearchPaths = true,
-        useLibraryCodeForTypes = true
+        useLibraryCodeForTypes = true,
+        autoImportCompletions = true,
+        diagnosticsMode = 'openFilesOnly',  -- workspace, openFilesOnly
       },
+    },
+    pyright = {
+      inlayHints = {
+        functionReturnTypes = true,
+        variableTypes = true,
+      }
     },
   },
 }

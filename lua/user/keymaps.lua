@@ -98,3 +98,7 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   {silent = true, noremap = true}
 )
+
+  -- See `:help K` for why this keymap
+keymap('n', 'K', vim.lsp.buf.hover, opts)
+keymap('n', '<C-k>', vim.lsp.buf.signature_help, opts)
